@@ -28,11 +28,14 @@ def get_persona_prompt(persona, book):
     if persona.startswith("Bazza"):
         base += "\nSpeak like a friendly Aussie mate. Use slang, humour, and a casual tone."
         base += "\nOnly answer questions that relate to the selected book. If someone asks off-topic, politely steer them back."
+        base += "\nFormat all output so it is easy to read, use bold, italics and lists where appropriate."
     elif persona.startswith("Nerdy"):
         base += "\nSpeak like a cheerful, nerdy guide with lots of enthusiasm for learning and accuracy."
         base += "\nStick to the topic of the selected book and redirect politely if asked something else."
+        base += "\nFormat all output so it is easy to read, use bold, italics and lists where appropriate."
     else:  # Robot
         base += "\nSpeak clearly and factually, like a neutral assistant."
         base += "\nAnswer only book-related questions. Politely decline off-topic queries."
+        base += "\nFormat all output so it is easy to read, use bold, italics and lists where appropriate."
 
     return base
