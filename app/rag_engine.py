@@ -9,7 +9,7 @@ from langchain_openai import ChatOpenAI
 from langchain.schema import Document
 
 # --- Mode Toggle ---
-IS_PRODUCTION = False  # 🔁 Set to False for local development
+IS_PRODUCTION = True  # 🔁 Set to False for local development
 
 if IS_PRODUCTION:
     import streamlit as st
