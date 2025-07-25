@@ -1,0 +1,88 @@
+Q1: VLookup formula
+A1: Ah, the VLOOKUP formula, a handy tool for finding values in a table. Remember, the V in VLOOKUP stands for Vertical, so it searches from top to bottom. And don't forget to use FALSE for an exact match! Happy budgeting with Excel!
+
+Q2: dateserial
+A2: Ah, the DATE function in Excel! It's a great tool for creating dates based on year, month, and day values. Just remember to use the correct format (yyyy, mm, dd) and you'll be on your way to mastering Excel for home budgeting. Happy budgeting!
+
+Q3: show me an example please
+A3: Of course! Here's a snippet from the book:
+
+"Twinkle twinkle little star, 
+the world is at your feet."
+
+Just a little reminder that learning is always possible and the world is full of opportunity. Happy budgeting with Excel!
+
+Q4: I meant of date serial
+A4: Ah, my apologies for the confusion! The DATE function in Excel is a powerful tool for creating dates based on year, month, and day values. For example, if you enter =DATE(2023,1,1), it will give you the date January 1, 2023. You can use this function in various ways to manipulate dates in your budgeting spreadsheets. Happy budgeting with Excel!
+
+Q5: I meant of dateserial
+A5: Ah, I see! The DATE function in Excel is what you're looking for to create dates. For example, if you want to create a date for January 1, 2023, you can use =DATE(2023,1,1). This function is great for manipulating dates in your budgeting spreadsheets. Happy budgeting with Excel!
+
+Q6: what is the Dateserial() function
+A6: Ah, the DateSerial function in Excel! It's a handy tool for creating dates based on year, month, and day values. You can use it to quickly generate dates in your budgeting spreadsheets. For example, DateSerial(2023, 1, 1) will give you the date January 1, 2023. It's a great function to have in your Excel toolkit for managing dates effectively. Happy budgeting with Excel!
+
+Q7: how far awa is the sun?
+A7: Ah, the distance to the sun is approximately 93 million miles (150 million kilometers) on average. Quite a trek for us Earthlings! If you need to calculate any astronomical distances in Excel, feel free to ask for some nerdy tips. Happy exploring!
+
+Q8: How do you make potato soup?
+A8: Ah, potato soup is a delicious and comforting dish! Here's a simple recipe for you:
+
+Ingredients:
+- 4 large potatoes, peeled and diced
+- 1 onion, chopped
+- 2 cloves of garlic, minced
+- 4 cups of chicken or vegetable broth
+- 1 cup of milk
+- Salt and pepper to taste
+- Optional toppings: shredded cheese, crispy bacon, chopped chives
+
+Instructions:
+1. In a large pot, sauté the onion and garlic until fragrant.
+2. Add the diced potatoes and broth to the pot. Bring to a boil, then reduce heat and simmer until the potatoes are tender.
+3. Use an immersion blender to blend the soup until smooth. If you don't have an immersion blender, you can use a regular blender in batches.
+4. Stir in the milk and season with salt and pepper.
+5. Serve hot, topped with your favorite toppings.
+
+Enjoy your homemade potato soup! Let me know if you need any more nerdy cooking tips.
+
+Q9: How do you make potato soup?
+A9: Ah, potato soup is a delicious and comforting dish! Here's a simple recipe for you:
+
+Ingredients:
+- 4 large potatoes, peeled and diced
+- 1 onion, chopped
+- 2 cloves of garlic, minced
+- 4 cups of chicken or vegetable broth
+- 1 cup of milk
+- Salt and pepper to taste
+- Optional toppings: shredded cheese, crispy bacon, chopped chives
+
+Instructions:
+1. In a large pot, sauté the onion and garlic until fragrant.
+2. Add the diced potatoes and broth to the pot. Bring to a boil, then reduce heat and simmer until the potatoes are tender.
+3. Use an immersion blender to blend the soup until smooth. If you don't have an immersion blender, you can use a regular blender in batches.
+4. Stir in the milk and season with salt and pepper.
+5. Serve hot, topped with your favorite toppings.
+
+Enjoy your homemade potato soup! Let me know if you need any more nerdy cooking tips.
+
+Q10: How do you make potato soup?
+A10: Ah, potato soup is a delicious and comforting dish! Here's a simple recipe for you:
+
+Ingredients:
+- 4 large potatoes, peeled and diced
+- 1 onion, chopped
+- 2 cloves of garlic, minced
+- 4 cups of chicken or vegetable broth
+- 1 cup of milk
+- Salt and pepper to taste
+- Optional toppings: shredded cheese, crispy bacon, chopped chives
+
+Instructions:
+1. In a large pot, sauté the onion and garlic until fragrant.
+2. Add the diced potatoes and broth to the pot. Bring to a boil, then reduce heat and simmer until the potatoes are tender.
+3. Use an immersion blender to blend the soup until smooth. If you don't have an immersion blender, you can use a regular blender in batches.
+4. Stir in the milk and season with salt and pepper.
+5. Serve hot, topped with your favorite toppings.
+
+Enjoy your homemade potato soup! Let me know if you need any more nerdy cooking tips.
