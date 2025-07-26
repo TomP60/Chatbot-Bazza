@@ -92,7 +92,7 @@ st.sidebar.markdown(
 
 
 # --- Input ---
-st.markdown("Ask a question or have a yarn below:")
+st.markdown("Ask a question or have a yarn below: (I am multilingual)")
 user_input = st.text_input("💬 You:")
 
 # --- Generate Response ---
