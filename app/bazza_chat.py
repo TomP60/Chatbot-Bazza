@@ -18,6 +18,11 @@ if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 if "full_log" not in st.session_state:
     st.session_state.full_log = []
+if "response_ready" not in st.session_state:
+    st.session_state.response_ready = False
+if "last_input" not in st.session_state:
+    st.session_state.last_input = ""
+
 
 # --- Sidebar Options ---
 st.sidebar.header("⚙️ Settings")
@@ -90,44 +95,48 @@ st.sidebar.markdown(
     f"🛠️ Version: `v1.0.0`  \n"
 )
 
-
 # --- Input ---
-st.markdown("Ask a question or have a yarn below: (I am multilingual)")
+st.markdown("Ask a question or have a yarn below: xxx(I am multilingual)")
+
 user_input = st.text_input("💬 You:")
 
-# --- Generate Response ---
-if user_input:
+# If new input is different from last stored one, treat it as new
+if user_input and user_input != st.session_state.last_input:
     with st.spinner(f"{persona_name}’s thinking..."):
-        # Memory jogger: up to 5 previous exchanges
         memory_context = "\n\n".join(
             f"Q: {q}\nA: {a}" for q, a in st.session_state.chat_history[-5:]
         )
         system_prompt = get_persona_prompt(persona_option, book_option) + "\n" + memory_context
         response = get_response(user_input, system_prompt, book_option, pg_mode=pg_mode)
 
-    # --- Save to session memory (view) and full log (file) ---
-    st.session_state.chat_history.append((user_input, response))
-    if len(st.session_state.chat_history) > 5:
-        st.session_state.chat_history.pop(0)
-    st.session_state.full_log.append((user_input, response))
+        # Log it
+        st.session_state.chat_history.append((user_input, response))
+        if len(st.session_state.chat_history) > 5:
+            st.session_state.chat_history.pop(0)
+        st.session_state.full_log.append((user_input, response))
 
-    # --- Display Response ---
-    st.markdown(f"**{persona_name}**: {response}")
+        # Store last input so we don't re-process
+        st.session_state.last_input = user_input
+        st.session_state.response_ready = True
 
-    # --- TTS ---
-    if TTS_AVAILABLE:
-        speaker_label = {
-            "Bazza": "🔊 Hear Bazza Say It",
-            "Nerdy": "🔊 Hear Nerdy Explain It",
-            "Robot": "🔊 Hear Robot Response"
-        }.get(persona_name, "🔊 Hear It")
+        # --- Display Response ---
+        st.markdown(f"**{persona_name}**: {response}")
 
-        if st.button(speaker_label):
-            tts = gTTS(text=response, lang='en')
-            tts.save("bazza.mp3")
-            audio_file = open("bazza.mp3", "rb")
-            audio_bytes = audio_file.read()
-            st.audio(audio_bytes, format="audio/mp3")
+        # --- TTS ---
+        if TTS_AVAILABLE:
+            speaker_label = {
+                "Bazza": "🔊 Hear Bazza Say It",
+                "Nerdy": "🔊 Hear Nerdy Explain It",
+                "Robot": "🔊 Hear Robot Response"
+            }.get(persona_name, "🔊 Hear It")
+
+            if st.button(speaker_label):
+                tts = gTTS(text=response, lang='en')
+                tts.save("bazza.mp3")
+                audio_file = open("bazza.mp3", "rb")
+                audio_bytes = audio_file.read()
+                st.audio(audio_bytes, format="audio/mp3")
+
 
 # --- Show Session History (short memory) ---
 if st.session_state.chat_history:
@@ -138,7 +147,7 @@ if st.session_state.chat_history:
 
 # --- Full Log Download ---
 if st.session_state.full_log:
-    if st.button("📥 Download Full Conversation (.txt)"):
+    if st.button("📅 Download Full Conversation (.txt)"):
         full_text = "\n\n".join(
             f"Q{i+1}: {q}\nA{i+1}: {a}" for i, (q, a) in enumerate(st.session_state.full_log)
         )
